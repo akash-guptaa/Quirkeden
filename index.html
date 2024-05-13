@@ -327,7 +327,26 @@ input::placeholder{
 
 	const deadline = new Date(Date.parse(new Date()) + 28 * 24 * 60 * 60 * 1000);
 	initializeClock('countdown-clock', deadline);
+
+	
 </script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "akashhupta2134@gmail.com",
+                Password: "@kash@gupta",
+                To: 'akashhupta2134@gmail.com',
+                From: "akashhupta2134@gmail.com",
+                Subject: "Sending Email using javascript",
+                Body: "Well that was easy!!",
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        }
+    </script>
 
 
 </body>
